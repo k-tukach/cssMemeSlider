@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    height: 100vh;
+    background-color: rgb(62, 62, 62);
+}
+
+.content {
+    width: 80rem/85rem * 100%;
+    max-width: 85rem;
+    margin: 0 auto;
+}
+
+.slider{
+    width: 80rem;
+    height: 40rem;
+}
+
+.navigation{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.bar{
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+    background-color: aqua;
+    border-radius: 1rem;
+    transition: all .4s ease;
+}
+
+.bar:hover{
+    background-color: white;
+}
+
+.caption {
+    display: flex;
+    transition: all .6s ease;
+}
+
+.type {
+    width: 16rem;
+    height: 2rem;
+    color: white;
+}
+
+input[name="r"] {
+    visibility: hidden;
+}
+
+.slides{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.slider-images {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all .6s ease;
+}
+
+.slide{
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .6s ease;   
+}
+
+.slide img{
+    width: 100%;
+    height: auto;
+    border-radius: 0.7rem;
+}
+
+body:has(#r1:checked) .slider-images {
+    transform: translateX(0);
+}
+
+body:has(#r2:checked) .slider-images {
+    transform: translateX(-80vw);
+}
+
+body:has(#r3:checked) .slider-images {
+    transform: translateX(-160vw);
+}
+
+body:has(#r4:checked) .slider-images {
+    transform: translateX(-240vw);
+}
