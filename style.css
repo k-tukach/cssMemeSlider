@@ -9,8 +9,8 @@
 }
 
 .content {
-    width: 80rem/85rem * 100%;
-    max-width: 85rem;
+    display: flex;
+    justify-content: center;
 }
 
 .slider{
@@ -22,13 +22,12 @@
 }
 
 .slides{
+    width: 80vw;
     height: 100%;
     display: flex;
     flex-direction: column;
-    max-width: 80vw;
-    max-height: 80vh;
     overflow: hidden;
-    margin: 1rem 0 0 12rem;
+    margin-top: 1rem;
 }
 
 .slider-images {
@@ -47,32 +46,46 @@
 }
 
 .slide img{
-    width: auto;
+    width: 100%;
     height: 100%;
     border-radius: 0.7rem;
 }
 
-.position {
+.location {
     width: 70vw;
     display: flex;
     justify-content: space-between;
-    margin: 1rem 0 0 12rem;
+    margin-top: 1rem;
+    @media (max-width: 40rem) {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+}
+
+.caption_wrapper {
+    width: 13rem;
+    height: 2.5rem;
+    overflow: hidden;
 }
 
 .caption {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    transition: all .6s ease;
 }
 
 .type {
     color: white;
-    transition: all .6s ease;
+    height: 2.5rem;
+    flex-shrink: 0;
 }
 
 .navigation{
     display: flex;
     gap: 0.5rem;
+    @media (max-width: 40rem) {
+        justify-content: center;
+    }
 }
 
 .bar-size {
@@ -116,20 +129,20 @@ body:has(#r4:checked) .slider-images {
     transform: translateX(-240vw);
 }
 
-body:has(#r1:checked) .caption_1{
+body:has(#r1:checked) .caption{
     transform: translateY(0);
 }
 
-body:has(#r2:checked) .caption_2 {
-    transform: translateY(-1rem);
+body:has(#r2:checked) .caption {
+    transform: translateY(-2.5rem);
 }
 
-body:has(#r3:checked) .caption_3 {
-    transform: translateY(-3.5rem);
+body:has(#r3:checked) .caption {
+    transform: translateY(-5rem);
 }
 
-body:has(#r4:checked) .caption_4 {
-    transform: translateY(-4.5rem);
+body:has(#r4:checked) .caption {
+    transform: translateY(-7.5rem);
 }
 
 body:has(#r1:checked) .bar_1 {
