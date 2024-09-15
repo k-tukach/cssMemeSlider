@@ -11,7 +11,6 @@
 .content {
     width: 80rem/85rem * 100%;
     max-width: 85rem;
-    margin: 0 auto;
 }
 
 .slider{
@@ -29,6 +28,7 @@
     max-width: 80vw;
     max-height: 80vh;
     overflow: hidden;
+    margin: 1rem 0 0 12rem;
 }
 
 .slider-images {
@@ -42,7 +42,6 @@
     flex-shrink: 0;
     width: 100%;
     height: 100%;
-    transition: all .6s ease;
     display: flex;
     justify-content: center;
 }
@@ -54,17 +53,21 @@
 }
 
 .position {
+    width: 70vw;
     display: flex;
-    align-items: baseline;
+    justify-content: space-between;
+    margin: 1rem 0 0 12rem;
 }
 
 .caption {
     display: flex;
-    transition: all .6s ease;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .type {
     color: white;
+    transition: all .6s ease;
 }
 
 .navigation{
@@ -72,23 +75,25 @@
     gap: 0.5rem;
 }
 
+.bar-size {
+    width: 1rem;
+    height: 3rem;
+}
+
 .bar{
+    display: flex;
     height: 1rem;
     width: 1rem;
     cursor: pointer;
     background-color: aqua;
     border-radius: 1rem;
     transition: all .4s ease;
+    border: solid 0.1rem aqua;
 }
 
 .bar:hover{
     background-color: white;
-}
-
-.bar:active {
-    background-color: rgb(62, 62, 62);
-    border-color: aqua;
-    border: 0.1rem;
+    border: solid 0.1rem white;
 }
 
 input[name="r"] {
@@ -112,17 +117,33 @@ body:has(#r4:checked) .slider-images {
 }
 
 body:has(#r1:checked) .caption_1{
-    transform: translateX(0);
+    transform: translateY(0);
 }
 
 body:has(#r2:checked) .caption_2 {
-    transform: translateX(-80vw);
+    transform: translateY(-1rem);
 }
 
 body:has(#r3:checked) .caption_3 {
-    transform: translateX(-160vw);
+    transform: translateY(-3.5rem);
 }
 
 body:has(#r4:checked) .caption_4 {
-    transform: translateX(-240vw);
+    transform: translateY(-4.5rem);
+}
+
+body:has(#r1:checked) .bar_1 {
+    background-color: rgb(62, 62, 62);
+}
+
+body:has(#r2:checked) .bar_2 {
+    background-color: rgb(62, 62, 62);
+}
+
+body:has(#r3:checked) .bar_3 {
+    background-color: rgb(62, 62, 62);
+}
+
+body:has(#r4:checked) .bar_4 {
+    background-color: rgb(62, 62, 62);
 }
