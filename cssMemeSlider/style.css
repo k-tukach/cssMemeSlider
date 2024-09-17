@@ -109,6 +109,11 @@
     border: solid 0.1rem white;
 }
 
+.bar:active {
+    background-color: purple;
+    border: solid 0.1rem purple;
+}
+
 input[name="r"] {
     visibility: hidden;
 }
