@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    height: 100vh;
+    background-color: rgb(62, 62, 62);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.slider{
+    width: 80rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slides{
+    width: 80vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.slider-images {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: all .6s ease;
+}
+
+.slide{
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.7rem;
+}
+
+.location {
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    @media (max-width: 40rem) {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+}
+
+.caption_wrapper {
+    width: 13rem;
+    height: 2.5rem;
+    overflow: hidden;
+}
+
+.caption {
+    display: flex;
+    flex-direction: column;
+    transition: all .6s ease;
+}
+
+.type {
+    color: white;
+    height: 2.5rem;
+    flex-shrink: 0;
+}
+
+.navigation{
+    display: flex;
+    gap: 0.5rem;
+    @media (max-width: 40rem) {
+        justify-content: center;
+    }
+}
+
+.bar-size {
+    width: 1rem;
+    height: 3rem;
+}
+
+.bar{
+    display: flex;
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+    background-color: aqua;
+    border-radius: 1rem;
+    transition: all .4s ease;
+    border: solid 0.1rem aqua;
+}
+
+.bar:hover{
+    background-color: white;
+    border: solid 0.1rem white;
+}
+
+.bar:active {
+    background-color: purple;
+    border: solid 0.1rem purple;
+}
+
+input[name="r"] {
+    visibility: hidden;
+}
+
+body:has(#r1:checked) .slider-images {
+    transform: translateX(0);
+}
+
+body:has(#r2:checked) .slider-images {
+    transform: translateX(-80vw);
+}
+
+body:has(#r3:checked) .slider-images {
+    transform: translateX(-160vw);
+}
+
+body:has(#r4:checked) .slider-images {
+    transform: translateX(-240vw);
+}
+
+body:has(#r1:checked) .caption{
+    transform: translateY(0);
+}
+
+body:has(#r2:checked) .caption {
+    transform: translateY(-2.5rem);
+}
+
+body:has(#r3:checked) .caption {
+    transform: translateY(-5rem);
+}
+
+body:has(#r4:checked) .caption {
+    transform: translateY(-7.5rem);
+}
+
+body:has(#r1:checked) .bar_1 {
+    background-color: rgb(62, 62, 62);
+}
+
+body:has(#r2:checked) .bar_2 {
+    background-color: rgb(62, 62, 62);
+}
+
+body:has(#r3:checked) .bar_3 {
+    background-color: rgb(62, 62, 62);
+}
+
+body:has(#r4:checked) .bar_4 {
+    background-color: rgb(62, 62, 62);
+}
